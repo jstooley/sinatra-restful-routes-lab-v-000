@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipe' do
+  @recipts = Recipt.new(params)
     erb :'recipes/show'
   end
 
